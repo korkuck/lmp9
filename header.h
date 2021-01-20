@@ -1,0 +1,1 @@
+void zwolnij_pamiec();
