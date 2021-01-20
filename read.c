@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "header.h"
 
-void czytaj_macierz(int n, int m, char *nazwa_pliku)
+void czytaj_macierz(int m, int n, char *nazwa_pliku)
 {
 	int i, j;
 	FILE *in = fopen(nazwa_pliku, "r");
