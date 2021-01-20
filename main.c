@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
 
 	czytaj_macierz(m,n,argv[3]);
 	wypisz_macierz(m,n);
-
+	schodkuj(m,n);
+	wypisz_macierz(m,n);
 	return 0;
 }

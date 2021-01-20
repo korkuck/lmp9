@@ -11,7 +11,7 @@ void schodkuj(int m, int n)
 	{
 		mnoznik = (macierz[i+1][i]/macierz[i][i]);
 		for(k = i + 1; k < m; k++)
-			for(j = i; j < n; j++)
+			for(j = i; j < n+1; j++)
 				macierz[k][j] = macierz[k][j] - mnoznik * macierz[i][j];
 	}
 }
