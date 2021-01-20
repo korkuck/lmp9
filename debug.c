@@ -14,3 +14,13 @@ void wypisz_macierz(int m, int n)
 	}
 }
 
+void wypisz_wyniki(int n)
+{
+	int i;
+	printf("\n Rozwiazaniem ukladu sa liczby: \n");
+	for(i=0; i<n; i++)
+	{
+		printf("x%d: %.2lf ",i+1,v_wynikow[i]);
+	}
+}
+

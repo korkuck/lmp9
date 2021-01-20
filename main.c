@@ -8,12 +8,18 @@ int main(int argc, char *argv[])
 
 	if(argc !=4)
 	{
-		fprintf(stderr, "Aby poprawnie wywolac program podaj ilosc rownan, ilosc niewiadomych i gdzie jest macierz!");
+		fprintf(stderr, "Aby poprawnie wywolac program podaj ilosc rownan, ilosc niewiadomych i gdzie jest macierz!\n");
 		return 1;
 	}
 
 	m = atoi(argv[1]);
 	n = atoi(argv[2]);
+	
+	if(m < n)
+	{
+		printf("Uklad nie posiada jednoznacznego rozwiazania!\n");
+		return 0;
+	}
 
 	czytaj_macierz(m,n,argv[3]);
 	wypisz_macierz(m,n);
