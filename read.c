@@ -9,6 +9,7 @@ void czytaj_macierz(int m, int n, char *nazwa_pliku)
 	if(in == NULL)
 	{
 		fprintf(stderr, "Blad czytania pliku %s!", nazwa_pliku);
+		przerwij_program = 1;
 		return;
 	}
 	for(i=0;i<m;i++)
