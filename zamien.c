@@ -1,13 +1,13 @@
 #include "header.h"
 
-void zamien(int x, int y, int n)
+void zamien(int a, int b, int n)
 {
-	int k;
-	double tmp;
-	for(k = 0; k<=n; k++)
+	int i;
+	double temp;
+	for(i = 0; i < n+1; i++)
 	{
-		tmp=macierz[x][k];
-		macierz[x][k]=macierz[y][k];
-		macierz[y][k]=tmp;
+		temp = macierz[a][i];
+		macierz[a][i] = macierz[b][i];
+		macierz[b][i] = temp;
 	}
 }
