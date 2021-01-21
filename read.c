@@ -8,6 +8,7 @@ void czytaj_macierz(int m, int n, char *nazwa_pliku)
 	FILE *in = fopen(nazwa_pliku, "r");
 	if(in == NULL)
 	{
+		przerwij_program=1;
 		fprintf(stderr, "Blad czytania pliku %s!", nazwa_pliku);
 		return;
 	}
