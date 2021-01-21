@@ -4,20 +4,36 @@
 
 void schodkuj(int m, int n)
 {
+	int trololo;
 	int i,j,k; //zmienne pomocnicze do petli
 	double mnoznik; //zmienna ta przyda sie do "schodkowania" macierzy - bedzie wygladac estetyczniej
 	n=n+1;
 	for(i = 0; i < m; i++)
 	{
-		if(macierz[i][i]!=0)
+		trololo = 1;
+		if(macierz[i][i]==0)
 		{
-			for(k = i + 1; k < m; k++)
+			for(k = i+1; k < m; k++)
 			{
-				mnoznik = (macierz[k][i]/macierz[i][i]);
-				for(j = i; j < n; j++)
+				if(macierz[k][i]!=0)
 				{
-					macierz[k][j] = macierz[k][j] - mnoznik * macierz[i][j];
+					zamien(i,k,n-1);
+					break;
+					trololo = 0;
 				}
+			}
+		}
+		for(k = i + 1; k < m; k++)
+		{
+			if (trololo == 1)//układ nieoznaczony
+			{
+				printf("Uklad jest nieoznaczony!\n");
+				break;
+			}
+			mnoznik = (macierz[k][i]/macierz[i][i]);
+			for(j = i; j < n; j++)
+			{
+				macierz[k][j] = macierz[k][j] - mnoznik * macierz[i][j];
 			}
 		}
 	}
