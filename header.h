@@ -1,6 +1,7 @@
 
 #define MAXR 1000
 
+int przerwij_program;
 double macierz[MAXR][MAXR];
 double v_wynikow[MAXR];
 void czytaj_macierz(int, int, char*);

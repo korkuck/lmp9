@@ -12,6 +12,7 @@ void podstaw(int m, int n)
 			if(macierz[i][n]!=0)
 			{
 				printf("Uklad nieoznaczony!\n");
+				przerwij_program = 1;
 				return;
 			}
 		}
